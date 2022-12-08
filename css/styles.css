@@ -28,6 +28,8 @@ html {
     --button-active-color: #188CE8;
     --border-line-color: #D9D9D9;
     --card-outline-color: #EEEEEE;
+    --shadow-team-color: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    --portfolio-shadow-color: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 body {
@@ -140,8 +142,15 @@ ul {
 .nav .link.current {
     color: var(--accent-text-color);
 }
+
+
 /* hero */
 .hero {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 600px;
+    
     padding-top: 200px;
     padding-bottom: 200px;
 
@@ -170,7 +179,10 @@ ul {
 }
 .hero-title {
     margin-bottom: 30px;
-
+    max-width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    
     color: var(--white-color);
     font-weight: 900;
     font-size: 44px;
@@ -186,9 +198,11 @@ ul {
     justify-content: center;
     margin-bottom: 50px;
 }
-.btn {
-    margin-right: 8px;
+
+.portfolio-btns .btn + .btn {
+    margin-left: 8px;
 }
+
 .portfolio-button {
     padding: 6px 22px;
     min-width: 73px;
@@ -213,7 +227,7 @@ ul {
 .portfolio-items {
     margin-right: 30px;
     margin-bottom: 30px;
-    
+    box-shadow: var(--portfolio-shadow-color);
 }
 .portfolio-items:nth-child(3n) {
     margin-right: 0;
@@ -337,6 +351,8 @@ img {
 .team-item {
     margin-right: 30px;
     background-color: var(--white-color);
+    border-radius: 4px;
+    box-shadow: var(--shadow-team-color);
 }
 .team-item:nth-child(4n) {
     margin-right: 0;
